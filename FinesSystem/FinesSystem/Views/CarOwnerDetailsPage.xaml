@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FinesSystem.Views.CarOwnerDetailsPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Имя:" />
+            <Entry Text="{Binding Name}" />
+            <Label Text="Телефон:" />
+            <Entry Text="{Binding Phone}" />
+            <Label Text="Водительское удостоверение:" />
+            <Entry Text="{Binding DriverLicenseNumber}" />
+            <Button Text="Сохранить" Clicked="SaveCarOwner" />
+            <Button Text="Удалить" Clicked="DeleteCarOwner" />
+            <Button Text="Отмена" Clicked="Cancel" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

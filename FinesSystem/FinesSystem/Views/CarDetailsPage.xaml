@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FinesSystem.Views.CarDetailsPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Номер:" />
+            <Entry Text="{Binding Number}" />
+            <Label Text="Модель:" />
+            <Entry Text="{Binding Model}" />
+            <Label Text="Владелец:" />
+            <Picker x:Name="OwnerPicker" ItemsSource="{Binding CarOwners}" SelectedIndexChanged="OwnerPicker_SelectedIndexChanged" />
+            <Button Text="Сохранить" Clicked="SaveCar" />
+            <Button Text="Удалить" Clicked="DeleteCar" />
+            <Button Text="Отмена" Clicked="Cancel" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
